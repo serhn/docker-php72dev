@@ -5,7 +5,7 @@ RUN docker-php-ext-install gd pdo pdo_sqlite exif pdo_mysql zip
 
 #PGSQL BEGIN
 RUN apt-get install -y libpq-dev
-RUN docker-php-ext-install pdo_pgsql pgsql 
+RUN docker-php-ext-install pdo_pgsql
 #PGSQL END
 
 RUN apt-get install -y mysql-client
