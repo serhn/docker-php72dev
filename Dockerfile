@@ -11,10 +11,10 @@ RUN docker-php-ext-install pdo_pgsql
 RUN apt-get install -y mysql-client
 RUN apt-get install -y net-tools vim
 RUN apt-get install -y git
+
 # build-essential
 RUN apt-get install -y nmap mc tmux screen
 RUN apt-get install -y dnsutils 
-
 RUN apt-get install -y gnupg2
 
 #RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
