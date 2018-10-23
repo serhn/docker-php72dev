@@ -57,6 +57,6 @@ set number \n\
 :set fileencoding=utf-8"  >> /root/.vimrc
 
 RUN apt-get -y install cron
-ADD touch /etc/cron.d/crontab
-ADD crontab /etc/cron.d/crontab
+RUN touch /etc/cron.d/crontab
+RUN crontab /etc/cron.d/crontab
 CMD cron
