@@ -13,6 +13,7 @@ RUN apt-get install -y net-tools vim
 RUN apt-get install -y git
 
 # build-essential
+RUN apt-get install -y procps
 RUN apt-get install -y nmap mc tmux screen
 RUN apt-get install -y dnsutils 
 RUN apt-get install -y gnupg2
@@ -55,3 +56,7 @@ set number \n\
 :set encoding=utf-8 \n\
 :set fileencoding=utf-8"  >> /root/.vimrc
 
+RUN apt-get -y install cron
+ADD touch /etc/cron.d/crontab
+ADD crontab /etc/cron.d/crontab
+CMD cron
